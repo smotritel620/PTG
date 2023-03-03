@@ -17,6 +17,8 @@ namespace WindowsFormsApp6
         private string skinT = "Активировано";
         public static List<bool> skins = new List<bool>();
         List<bool> skins_truf = new List<bool>();
+        Label ballL_shop;
+        string ballL_shop_text = "" + Form1.ball;
         public Shop() : base()
         {
             skins.Add(true);
@@ -39,6 +41,13 @@ namespace WindowsFormsApp6
             Height = 877;
             BackgroundImage = Resources.back;
             BackgroundImageLayout = ImageLayout.Stretch;
+            ballL_shop = new Label()
+            {
+                Text = ballL_shop_text,
+                Location = new Point(10, 10),
+                BackColor = Color.Transparent,
+            };
+            Controls.Add(ballL_shop);
             shopP = new ShopP()
             {
                 BackgroundImage = Resources.startmenu,
@@ -59,12 +68,15 @@ namespace WindowsFormsApp6
 
         private void ShopB_Click(object sender, EventArgs e)
         {
-            if (skins_truf[1] == false && skin == 1)
+            if (skins_truf[1] == false && skin == 1 && Form1.ball >= 100)
             {
                 skins[1] = true;
                 skins_truf[1] = true;
                 skinT = "Активировать";
                 shopB.Text = skinT;
+                Form1.ball -= 100;
+                ballL_shop_text = "" + Form1.ball;
+                ballL_shop.Text = ballL_shop_text;
             }
             else if (skins_truf[1] == true && skin == 1)
             {
@@ -72,12 +84,15 @@ namespace WindowsFormsApp6
                 shopB.Text = skinT;
                 skins_truf[1] =  false;
             }
-            if (skins_truf[2] == false && skin == 2)
+            if (skins_truf[2] == false && skin == 2 && Form1.ball >= 200)
             {
                 skins[2] = true;
                 skins_truf[2] = true;
                 skinT = "Активировать";
                 shopB.Text = skinT;
+                Form1.ball -= 200;
+                ballL_shop_text = "" + Form1.ball;
+                ballL_shop.Text = ballL_shop_text;
             }
             else if (skins_truf[2] == true && skin == 2)
             {
@@ -85,12 +100,15 @@ namespace WindowsFormsApp6
                 shopB.Text = skinT;
                 skins_truf[2] = false;
             }
-            if (skins_truf[3] == false && skin == 3)
+            if (skins_truf[3] == false && skin == 3 && Form1.ball >= 300)
             {
                 skins[3] = true;
                 skins_truf[3] = true;
                 skinT = "Активировать";
                 shopB.Text = skinT;
+                Form1.ball -= 300;
+                ballL_shop_text = "" + Form1.ball;
+                ballL_shop.Text = ballL_shop_text;
             }
             else if (skins_truf[3] == true && skin == 3)
             {
@@ -98,12 +116,15 @@ namespace WindowsFormsApp6
                 shopB.Text = skinT;
                 skins_truf[3] = false;
             }
-            if (skins_truf[4] == false && skin == 4)
+            if (skins_truf[4] == false && skin == 4 && Form1.ball >= 400)
             {
                 skins[4] = true;
                 skins_truf[4] = true;
                 skinT = "Активировать";
                 shopB.Text = skinT;
+                Form1.ball -= 400;
+                ballL_shop_text = "" + Form1.ball;
+                ballL_shop.Text = ballL_shop_text;
             }
             else if (skins_truf[4] == true && skin == 4)
             {
@@ -111,12 +132,15 @@ namespace WindowsFormsApp6
                 shopB.Text = skinT;
                 skins_truf[4] = false;
             }
-            if (skins_truf[5] == false && skin == 5)
+            if (skins_truf[5] == false && skin == 5 && Form1.ball >= 500)
             {
                 skins[5] = true;
                 skins_truf[5] = true;
                 skinT = "Активировать";
                 shopB.Text = skinT;
+                Form1.ball -= 500;
+                ballL_shop_text = "" + Form1.ball;
+                ballL_shop.Text = ballL_shop_text;
             }
             else if (skins_truf[5] == true && skin == 5)
             {
@@ -124,12 +148,15 @@ namespace WindowsFormsApp6
                 shopB.Text = skinT;
                 skins_truf[5] = false;
             }
-            if (skins_truf[6] == false && skin == 6)
+            if (skins_truf[6] == false && skin == 6 && Form1.ball >= 600)
             {
                 skins[6] = true;
                 skins_truf[6] = true;
                 skinT = "Активировать";
                 shopB.Text = skinT;
+                Form1.ball -= 600;
+                ballL_shop_text = "" + Form1.ball;
+                ballL_shop.Text = ballL_shop_text;
             }
             else if (skins_truf[6] == true && skin == 6)
             {

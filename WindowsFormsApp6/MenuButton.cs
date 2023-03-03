@@ -21,6 +21,10 @@ namespace WindowsFormsApp6
         }
         private void skin()
         {
+            if (Shop.skin == 0)
+            {
+                BackgroundImage = Resources.block;
+            }
             if (Shop.skin == 1 && Shop.skins[1] == true)
             {
                 BackgroundImage = Resources.dark__1_;

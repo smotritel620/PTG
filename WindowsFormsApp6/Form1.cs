@@ -19,6 +19,7 @@ namespace WindowsFormsApp6
         SoundPlayer bClick;
         GameForm game;
         Shop shop;
+        public static int ball = 0;
         public Form1()
         {
             InitializeComponent();
@@ -62,6 +63,10 @@ namespace WindowsFormsApp6
         }
         private void skin()
         {
+            if (Shop.skin == 0)
+            {
+                BackgroundImage = Resources.startmenuD;
+            }
             if (Shop.skin == 1 && Shop.skins[1] == true)
             {
                 BackgroundImage = Resources.startmenuD;
@@ -99,7 +104,7 @@ namespace WindowsFormsApp6
 
         private void Game_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Close();
+            Show();
         }
 
         private void ButtonClick()

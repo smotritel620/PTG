@@ -25,15 +25,15 @@ namespace WindowsFormsApp6
         System.Windows.Forms.Timer timerbal;
         Random enemy_random = new Random();
         int enemy_random2 = 0;
-        public int ball = 0;
         Label ballL;
+        double spidEn = 25;
         public GameForm() : base()
         {
             Width = 620;
             Height = 877;
             ballL = new Label()
             {
-                Text = "" + ball,
+                Text = "" + Form1.ball,
                 Location = new Point(10, 10),
                 BackColor = Color.Transparent
             };
@@ -68,13 +68,14 @@ namespace WindowsFormsApp6
             };
             Controls.Add(enemy1);
             KeyDown += GameForm_KeyDown;
-            Skin();
+            Skin(); 
         }
 
         private void Timerbal_Tick(object sender, EventArgs e)
         {
-            ball++;
-            ballL.Text = "" + ball;
+            Form1.ball++;
+            ballL.Text = "" + Form1.ball;
+            spidEn += 0.2;
         }
 
         private void TimerEM_Tick(object sender, EventArgs e)
@@ -84,8 +85,14 @@ namespace WindowsFormsApp6
                 KeyDown -= GameForm_KeyDown;
                 timerbal.Stop();
                 timerEM.Stop();
+                DialogResult result = MessageBox.Show("Game Over");
+                if (result == DialogResult.OK || result == DialogResult.Cancel)
+                {
+                    Close();
+                    return;
+                }
             }
-            enemy1.Location = new Point(enemy1.Location.X, enemy1.Location.Y + 25);
+            enemy1.Location = new Point(enemy1.Location.X, (int)(enemy1.Location.Y + spidEn));
             if (enemy1.Location.Y > Screen.GetWorkingArea(this).Height - 200)
             {
                 enemy_random2 = enemy_random.Next(0, centerX * 2 - 300);
@@ -94,6 +101,13 @@ namespace WindowsFormsApp6
         }
         private void Skin()
         {
+            if (Shop.skin == 0)
+            {
+                player1.BackgroundImage = Resources.player;
+                player2.BackgroundImage = Resources.player;
+                BackgroundImage = Resources.back;
+                enemy1.BackgroundImage = Resources.enemy;
+            }
             if (Shop.skin == 1 && Shop.skins[1] == true)
             {
                 player1.BackgroundImage = Resources._D;
