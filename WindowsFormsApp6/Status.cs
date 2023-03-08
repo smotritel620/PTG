@@ -1,16 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
-/*namespace WindowsFormsApp6
+namespace WindowsFormsApp6
 {
-    class Status : ISerializable
+    [Serializable]
+    class Status
     {
-        List<bool> skins2 = Shop.skins;
-        int ball2 = Form1.ball;
+        bool[] skins2;
+        int ball2;
+        public Status()
+        {
+            skins2 = Shop.skins.ToArray();
+            ball2 = Form1.ball;
+        }
+
+        public void Load()
+        {
+            Shop.skins = new List<bool>(skins2);
+            Form1.ball = ball2;
+        }
     }
 }
-*/

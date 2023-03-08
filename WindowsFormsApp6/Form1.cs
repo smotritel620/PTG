@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -46,12 +48,18 @@ namespace WindowsFormsApp6
             };
             Controls.Add(Exit);
             Exit.Click += Exit_Click;
+
+            shop = new Shop();
+            BinaryFormatter narnia = new BinaryFormatter();
+            FileStream stream = new FileStream("board.ptg", FileMode.Open);
+            Status status = (Status)narnia.Deserialize(stream);
+            stream.Close();
+            status.Load();
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             ButtonClick();
-            shop = new Shop();
             shop.Show();
         }
 
@@ -59,6 +67,12 @@ namespace WindowsFormsApp6
         {
             ButtonClick();
             System.Threading.Thread.Sleep(690);
+            Status status = new Status();
+            BinaryFormatter narnia = new BinaryFormatter();
+            FileStream stream = new FileStream("board.ptg", FileMode.Create);
+
+            narnia.Serialize(stream, status);
+            stream.Close();
             Close();
         }
         private void skin()
