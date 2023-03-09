@@ -97,7 +97,7 @@ namespace WindowsFormsApp6
                 enemy1.Location = new Point(enemy_random2, 0);
             }
         }
-        private void Skin()
+        public void Skin()
         {
             if (Shop.skin == 0)
             {
@@ -147,6 +147,27 @@ namespace WindowsFormsApp6
                 player2.BackgroundImage = Resources._M2;
                 BackgroundImage = Resources.nM2;
                 enemy1.BackgroundImage = Resources.playerM2;
+            }
+            if (Shop.skin == 7 && Shop.skins[6] == true)
+            {
+                player1.BackgroundImage = Resources._SM__2_;
+                player2.BackgroundImage = Resources._SM__2_;
+                BackgroundImage = Resources.nSM;
+                enemy1.BackgroundImage = Resources.playerSM;
+            }
+            if (Shop.skin == 8 && Shop.skins[6] == true)
+            {
+                player1.BackgroundImage = Resources._WT2;
+                player2.BackgroundImage = Resources._WT2;
+                BackgroundImage = Resources.nWT2;
+                enemy1.BackgroundImage = Resources.playerWT2;
+            }
+            if (Shop.skin == 9 && Shop.skins[6] == true)
+            {
+                player1.BackgroundImage = Resources._C;
+                player2.BackgroundImage = Resources._C;
+                BackgroundImage = Resources.БезымянныйC;
+                enemy1.BackgroundImage = Resources.playerC;
             }
         }
 

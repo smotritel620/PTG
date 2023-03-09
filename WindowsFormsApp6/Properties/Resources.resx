@@ -148,6 +148,12 @@
   <data name="nM2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\БезымянныйM2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="nSM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\БезымянныйSM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nWT2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\БезымянныйWT2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="player" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\+.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,8 +178,14 @@
   <data name="playerM2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\playerM2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="playerSM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playerSM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="startmenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\startmenu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="startmenuC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\startmenuC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="startmenuD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\startmenuD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

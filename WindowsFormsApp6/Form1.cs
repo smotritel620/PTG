@@ -60,7 +60,15 @@ namespace WindowsFormsApp6
         private void Button1_Click(object sender, EventArgs e)
         {
             ButtonClick();
-            shop.Show();
+            try
+            {
+                shop.Show();
+            }
+            catch
+            {
+                shop = new Shop();
+                shop.Show();
+            }
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -111,6 +119,7 @@ namespace WindowsFormsApp6
         {
             ButtonClick();
             game = new GameForm();
+
             game.FormClosed += Game_FormClosed;
             Hide();
             game.Show();
@@ -120,7 +129,6 @@ namespace WindowsFormsApp6
         {
             Show();
         }
-
         private void ButtonClick()
         {
             bClick.Play();
